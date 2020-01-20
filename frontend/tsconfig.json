@@ -1,0 +1,36 @@
+{
+    "extends": "../tsconfig.json",
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "types/**/*.d.ts"
+    ],
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "baseUrl": ".",
+        "module": "commonjs",
+        "target": "es6",
+        "sourceMap": true,
+        "jsx": "react",
+        "rootDirs": [
+            "."
+        ],
+        "skipLibCheck": true,
+        "lib": [
+            "dom",
+            "es5",
+            "scripthost",
+            "es2015"
+        ],
+        "typeRoots": [
+            "./types",
+            "./node_modules/@types",
+            "../node_modules/@types"
+        ],
+        "paths": {
+            "@frontend/*": [
+                "src/*"
+            ]
+        }
+    }
+}

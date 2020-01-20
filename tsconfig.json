@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react",
+        "esModuleInterop": true,
+        "rootDirs": [
+            "."
+        ],
+        "skipLibCheck": true,
+        "lib": [
+            "dom",
+            "es5",
+            "scripthost",
+            "es2015"
+        ],
+        "typeRoots": [
+            "frontend/src/@types",
+            "./node_modules/@types",
+            "../node_modules/@types"
+        ],
+        "paths": {
+            "@frontend/*": [
+                "*"
+            ],            
+        }
+    }
+}
+

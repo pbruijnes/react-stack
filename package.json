@@ -1,0 +1,17 @@
+{
+  "name": "pim-redux-stack",
+  "version": "1.0.0",
+  "description": "Example redux stack",
+  "author": "Pim Bruijnes",
+  "license": "MIT",
+  "private": true,  
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test",
+      "pre-push": "yarn test"
+    }
+  },
+  "workspaces": [
+    "frontend"
+  ]
+}
