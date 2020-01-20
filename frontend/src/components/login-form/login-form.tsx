@@ -1,21 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Col, Grid, Row } from 'react-bootstrap'
 import { Field, Form } from 'react-final-form'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 
+import { ThemeContext } from '@frontend/context'
 import { AppState } from '@frontend/state'
 import { Credentials, GrantType } from '@frontend/state/authentication/types'
 import { substractDomain } from '@frontend/utils'
 
-const FormWrapper = styled.div`
+interface ThemedFormProps {
+    isDark: boolean
+}
+
+const ThemedForm = styled.div<ThemedFormProps>`
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
-`
-
-const Input = styled(Field)`
-    margin-bottom: 10px;
+    background-color: ${({ isDark }: ThemedFormProps) => (isDark ? '#000' : 'red')};
 `
 
 const ErrorMessage = styled.p`
@@ -31,7 +33,10 @@ interface FormValues {
     username?: string
     password?: string
 }
+
 export const LoginForm: React.FunctionComponent<Props> = ({ authenticateBasic }: Props) => {
+    const { isDark } = useContext(ThemeContext)
+
     const { error } = useSelector((state: AppState) => ({
         error: state.authentication.error,
     }))
@@ -67,7 +72,7 @@ export const LoginForm: React.FunctionComponent<Props> = ({ authenticateBasic }:
                         onSubmit={onSubmit}
                         validate={validate}
                         render={({ handleSubmit, submitting, pristine, values }) => (
-                            <FormWrapper>
+                            <ThemedForm isDark={isDark}>
                                 {error && (
                                     <ErrorMessage>{error && error.error_description}</ErrorMessage>
                                 )}
@@ -116,7 +121,7 @@ export const LoginForm: React.FunctionComponent<Props> = ({ authenticateBasic }:
                                         Sign in
                                     </button>
                                 </form>
-                            </FormWrapper>
+                            </ThemedForm>
                         )}
                     />
                 </Col>

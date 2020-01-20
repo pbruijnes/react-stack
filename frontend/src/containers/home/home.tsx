@@ -2,8 +2,8 @@ import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 
-import { AppState } from '@frontend/state/'
 import { PageTemplate } from '@frontend/components/page-template'
+import { AppState } from '@frontend/state/'
 
 export const Home = () => {
     const { current } = useSelector((state: AppState) => ({
