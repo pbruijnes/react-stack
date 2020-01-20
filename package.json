@@ -4,7 +4,10 @@
   "description": "Example redux stack",
   "author": "Pim Bruijnes",
   "license": "MIT",
-  "private": true,  
+  "private": true,
+  "scripts": {
+    "dev:frontend": "yarn --cwd frontend dev"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "yarn test",

@@ -4,8 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "webpack --mode development --watch",
-    "start": "webpack-dev-server --open --mode development --display-error-details ",
+    "dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
   },
   "devDependencies": {

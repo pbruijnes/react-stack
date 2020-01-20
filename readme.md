@@ -1,5 +1,9 @@
 # React Stack Example
 
+### Run App
+1. ```yarn```
+2. ```yarn dev:frontend```
+
 ### Folder Structure
 - Yarn Workspaces
 - Ducks
