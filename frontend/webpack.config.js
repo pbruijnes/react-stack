@@ -27,12 +27,6 @@ module.exports = {
                     },
                 ],
             },
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            {
-                enforce: 'pre',
-                test: /\.js$/,
-                loader: 'source-map-loader',
-            },
         ],
     },
 
@@ -48,7 +42,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: './src/index.html',
+            template: './src/html-template/index.html',
             filename: './index.html',
         }),
     ],
@@ -62,7 +56,7 @@ module.exports = {
         historyApiFallback: true,
         port: 3001,
         contentBase: path.resolve('dist'),
-        compress: true,
+        compress: false,
         hot: true,
     },
 }
