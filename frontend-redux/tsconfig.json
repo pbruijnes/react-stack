@@ -1,10 +1,17 @@
 {
+    "extends": "../tsconfig.json",
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "types/**/*.d.ts"
+    ],
     "compilerOptions": {
+        "outDir": "./dist/",
         "baseUrl": ".",
         "module": "commonjs",
-        "target": "es5",
+        "target": "es6",
+        "sourceMap": true,
         "jsx": "react",
-        "esModuleInterop": true,
         "rootDirs": [
             "."
         ],
@@ -16,18 +23,14 @@
             "es2015"
         ],
         "typeRoots": [
-            "frontend/src/@types",
+            "./types",
             "./node_modules/@types",
             "../node_modules/@types"
         ],
         "paths": {
             "@frontend-redux/*": [
-                "*"
-            ],    
-            "@frontend-graphql/*": [
-                "*"
-            ],            
+                "src/*"
+            ]
         }
     }
 }
-
