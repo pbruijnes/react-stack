@@ -38,7 +38,7 @@ export const Navigation = () => {
                         </LinkContainer>
                     )}
                     <NavItem eventKey={1} onClick={() => toggleTheme()}>
-                        Context API Example
+                        Simple Context Example
                     </NavItem>
                 </Nav>
                 <Nav pullRight>

@@ -9,7 +9,7 @@ import { getRehydratedStore } from '@frontend/state/store'
 export const App = () => {
     const { store, persistor } = getRehydratedStore()
 
-    const [dark, setDark] = useState(true)
+    const [dark, setDark] = useState(false)
     const toggleTheme = () => {
         setDark(!dark)
     }

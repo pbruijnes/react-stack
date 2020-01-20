@@ -17,7 +17,7 @@ const ThemedForm = styled.div<ThemedFormProps>`
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
-    background-color: ${({ isDark }: ThemedFormProps) => (isDark ? '#000' : 'red')};
+    background-color: ${({ isDark }: ThemedFormProps) => (isDark ? '#858585' : '#f7f7f7')};
 `
 
 const ErrorMessage = styled.p`
