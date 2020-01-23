@@ -6,8 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev:frontend-redux": "yarn --cwd frontend-redux dev",
-    "dev:frontend-gql": "yarn --cwd frontend-graphql dev"
+    "dev:redux": "yarn --cwd frontend-redux dev",
+    "dev:graphql": "yarn --cwd frontend-graphql dev"
   },
   "husky": {
     "hooks": {

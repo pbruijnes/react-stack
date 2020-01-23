@@ -8,10 +8,10 @@ export const Home = () => {
         <PageTemplate>
             <Row>
                 <Col md={12}>
-                    <h4>Welcome to GraphQL Example</h4>
+                    <h4>GraphQL Example</h4>
                 </Col>
                 <Col md={12}>
-                    <img src="https://media.giphy.com/media/ZmdErsWqppgMo/giphy.gif" />
+                    <img src="https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F552580%2Fstarlink-1-launch-is-spacex.jpg&w=700&op=resize" />
                 </Col>
             </Row>
         </PageTemplate>
