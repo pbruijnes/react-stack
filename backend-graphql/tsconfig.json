@@ -1,0 +1,33 @@
+{
+  "extends": "../tsconfig.json",
+  "include": [
+    "src/**/*",
+    "types/**/*"
+  ],
+  "exclude": [
+    "**/__mocks__/*",
+    "**/*.test.ts",
+    "src/**/*.test.ts",
+    "node_modules",
+    "dist/**"
+  ],
+  "compilerOptions": {
+    "strictPropertyInitialization": false,
+    "allowJs": true,
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "esnext",
+    "outDir": "dist",
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types",
+      "../node_modules/@types"
+    ],
+    "skipLibCheck": true,
+    "paths": {
+      "@backend/*": [
+        "./src/*"
+      ]
+    }
+  }
+}
