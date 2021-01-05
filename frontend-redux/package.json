@@ -46,7 +46,7 @@
     "webpack-notifier": "^1.6.0"
   },
   "dependencies": {
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "bootstrap": "3",
     "final-form": "^4.18.6",
     "lint-staged": "^9.5.0",
